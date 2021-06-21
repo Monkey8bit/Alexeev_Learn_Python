@@ -13,13 +13,14 @@ print(numbers)  # Вывод списка
 sum_total = 0  # Переменная, которая будет содержать сумму чисел списка, сумма цифр которых делится на 7 нацело
 
 for number in numbers:
+    temp_number = number
     sum_digits = 0
     while number > 0:  # Цикл, считающий сумму цифр
         num = number % 10
         number = number // 10
         sum_digits += num
     if sum_digits % 7 == 0:  # Проверка деления на 7 нацело
-        sum_total += sum_digits
+        sum_total += temp_number
     else:
         continue
 
@@ -37,13 +38,14 @@ print(new_numbers)  # Вывод нового списка
 sum_total = 0  # Обновление переменной с суммой
 
 for number in new_numbers:
+    temp_number = number
     sum_digits = 0
     while number > 0:
         num = number % 10
         number = number // 10
         sum_digits += num
     if sum_digits % 7 == 0:
-        sum_total += sum_digits
+        sum_total += temp_number
     else:
         continue
 
@@ -56,13 +58,14 @@ for i in range(len(numbers)):  # Замена элементов списка н
 sum_total = 0
 
 for number in numbers:
+    temp_number = number
     sum_digits = 0
     while number > 0:
         num = number % 10
         number = number // 10
         sum_digits += num
     if sum_digits % 7 == 0:
-        sum_total += sum_digits
+        sum_total += temp_number
     else:
         continue
 
